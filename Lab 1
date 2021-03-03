@@ -1,0 +1,61 @@
+*nomer 1
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Lab_1 {
+
+    public static void main (String[] args){
+        int a , s, h;
+        Scanner masuk = new Scanner (System.in);
+        System.out.println("Enter an integer for seconds : ");
+        a =  masuk.nextInt();
+        s = a / 60;
+        h = a % 60;
+        if (h!=0) {
+            System.out.println ( a + " seconds is " + s + " minutes and " + h + " seconds.");
+        }
+        else {
+            System.out.println ( a + " seconds is " + s + " minutes.");
+        }
+    }
+}
+
+*nomer 2
+
+ package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int nama_hari;
+        System.out.println("Jika hari ini adalah senin, hari apakah di 1000 hari kemudian ?");
+        nama_hari = 1000 % 7;
+        System.out.print("\n 1000 hari kemudian adalah hari  ");
+        switch (nama_hari){
+            case 0:
+                System.out.println("Senin");
+                    break;
+            case 1:
+                System.out.println("Selasa");
+                break;
+            case 2:
+                System.out.println("Rabu");
+                break;
+            case 3:
+                System.out.println("Kamis");
+                break;
+            case 4:
+                System.out.println("Jumat");
+                break;
+            case 5:
+                System.out.println("Sabtu");
+                break;
+            case 6:
+                System.out.println("Minggu");
+                break;
+
+        }
+    }
+}
