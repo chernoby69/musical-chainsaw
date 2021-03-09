@@ -1,0 +1,47 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+import java.text.DecimalFormat;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Random acak = new Random();
+            int hoki1 = acak.nextInt(9);
+            int hoki2 = acak.nextInt(9);
+            int masukan, no1, no2;
+
+        DecimalFormat For = new DecimalFormat("00");
+
+        System.out.println("Nomer Hoki : " + hoki1 + "" + hoki2);
+
+            Scanner baca =  new Scanner(System.in);
+            System.out.println("Masukan nomer lotre : ");
+            masukan = baca.nextInt();
+
+        if (masukan >= 99 )
+        {
+            System.out.println("INVALID NUMBER");
+        }
+        else {
+            String inputFor = For.format(masukan);
+                no1 = Character.getNumericValue(inputFor.charAt(0));
+                no2 = Character.getNumericValue(inputFor.charAt(1));
+
+            if (no1 == hoki1 && no2 == hoki2) {
+                System.out.println("Selamat anda mendapatkan jackpot senilai $10000");
+            }
+            else if (no1 == hoki2 && no2 == hoki1) {
+                System.out.println("Selamat anda mendapatkan hadiah senilai $3000");
+            }
+            else if (no1 == hoki1 || no2 == hoki2 || no1 == hoki2 || no2 == hoki1) {
+                System.out.println("Selamat!! Anda berhak mendapat hadiah $1000");
+            }
+            else {
+                System.out.println("Anda belum beruntung hari ini.");
+            }
+        }
+    }
+}
