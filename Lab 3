@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int random, tebak, jumlah;
+        int no_random, tebak_nomer, jumlah;
         random = (int) (Math.random() * 100);
         System.out.println("Guess a magic number between 0 and 100");
         Scanner masukan = new Scanner(System.in);
@@ -15,15 +15,15 @@ public class Main {
         do {
             jumlah++;
             System.out.print("Enter your guess  : ");
-            tebak = masukan.nextInt();
+            tebak_nomer = masukan.nextInt();
 
-            if (tebak > random) {
+            if (tebak_nomer > no_random) {
                 System.out.println("Your guess is too high");
-            } else if (tebak < random) {
+            } else if (tebak_nomer < no_random) {
                 System.out.println("Your guess is too low");
             } else {
-                System.out.print("Yes, the number is " + tebak );
+                System.out.print("Yes, the number is " + tebak_nomer );
             }
-        } while (tebak != random);
+        } while (tebak_nomer != no_random);
     }
 }
