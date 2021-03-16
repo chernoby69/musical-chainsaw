@@ -1,0 +1,29 @@
+ackage com.company;
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        int random, tebak, jumlah;
+        random = (int) (Math.random() * 100);
+        System.out.println("Guess a magic number between 0 and 100");
+        Scanner masukan = new Scanner(System.in);
+        jumlah = 0;
+
+
+        do {
+            jumlah++;
+            System.out.print("Enter your guess  : ");
+            tebak = masukan.nextInt();
+
+            if (tebak > random) {
+                System.out.println("Your guess is too high");
+            } else if (tebak < random) {
+                System.out.println("Your guess is too low");
+            } else {
+                System.out.print("Yes, the number is " + tebak );
+            }
+        } while (tebak != random);
+    }
+}
