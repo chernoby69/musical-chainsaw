@@ -1,0 +1,39 @@
+package com.company;
+
+import java.time.temporal.ChronoUnit;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.time.LocalDate;
+
+public class kalender {
+
+    public static void main(String[] args) {
+
+        Calendar kalender = Calendar.getInstance();
+        SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat ev = new SimpleDateFormat("yyyy-MM-dd");
+
+        String tanggal = date.format(kalender.getTime());
+        String hitungan1 = ev.format(kalender.getTime());
+        System.out.println("Tanggal hari ini: " + tanggal +" atau "+ hitungan1);
+
+        kalender.setTimeInMillis(2000);
+        String Tanggal1 = date.format(kalender.getTime());
+        String hitungan2 = ev.format(kalender.getTime());
+        System.out.println("Tanggal sistem Calender: " + Tanggal1 + " atau "+ hitungan2);
+
+
+        LocalDate sebelum = LocalDate.parse(hitungan2);
+        LocalDate sesudah = LocalDate.parse(hitungan1);
+
+        long Daybetween = ChronoUnit.DAYS.between(sebelum,sesudah);
+        long month = ChronoUnit.MONTHS.between(sebelum,sesudah);
+        long year = ChronoUnit.YEARS.between(sebelum,sesudah);
+
+
+        System.out.println(String.format("Jumlah waktu yang sudah berlalu hingga " +
+                "saat ini adalah %d tahun %d bulan, %d Hari ",year,month,Daybetween));
+    }
+
+}
+
