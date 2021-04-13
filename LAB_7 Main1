@@ -24,7 +24,7 @@ public class Main {
             System.out.println(course2student.get(x) + ", ");
         }
         System.out.println("\nDrop Student in course1: " + "\n");
-         course1.hapus("Peter jones");
+         course1.erase("Peter jones");
         System.out.print("Number of Students in course1: "+  course1.getNumberStuden() + "\n");
         for(int x=0; x<course1student.size();x++){
             if(x == course1student.size() - 1){
@@ -33,5 +33,6 @@ public class Main {
                 System.out.println(course1student.get(x)+ ", ");
         }
     }
+
 }
 
