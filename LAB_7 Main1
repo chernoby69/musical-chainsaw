@@ -1,0 +1,37 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        main2  course1 = new main2("AR");
+        main2  course2 = new main2("VR");
+         course1.addStudent("Peter jones");
+         course1.addStudent("Kim Smith");
+         course1.addStudent("Anne Kennedy");
+         course2.addStudent("Peter Jones");
+         course2.addStudent("steve Smith");
+
+            System.out.println("Number of Student in course1: "+  course1.getNumberStuden() );
+        ArrayList<String>  course1student =  course1.getStudents();
+        for(int x=0; x<course1student.size(); x++){
+            System.out.println(course1student.get(x) + ", " + "\n" );
+        }
+        System.out.println("Number of Student in  course2: "+  course2.getNumberStuden());
+        ArrayList<String> course2student =  course2.getStudents();
+        for(int x=0; x<course2student.size(); x++){
+            System.out.println(course2student.get(x) + ", ");
+        }
+        System.out.println("\nDrop Student in course1: " + "\n");
+         course1.hapus("Peter jones");
+        System.out.print("Number of Students in course1: "+  course1.getNumberStuden() + "\n");
+        for(int x=0; x<course1student.size();x++){
+            if(x == course1student.size() - 1){
+                System.out.println(course1student.get(x));
+            }else
+                System.out.println(course1student.get(x)+ ", ");
+        }
+    }
+}
+
