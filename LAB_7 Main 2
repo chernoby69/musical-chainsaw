@@ -1,0 +1,36 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class main2 {
+    private String Cnamasiswa;
+    private ArrayList<String> MAHASISWA = new ArrayList<>();
+    private int NomerMahasiswa = 0;
+
+    main2(String Cnamasiswa){
+        this.Cnamasiswa = Cnamasiswa;
+    }
+    public String getCname(){
+        return Cnamasiswa;
+    }
+    public void addStudent(String Student){
+        MAHASISWA.add(Student);
+        NomerMahasiswa++;
+    }
+    public void erase(String student){
+        for(int i = 0; i< NomerMahasiswa; i++ ){
+            if(MAHASISWA.get(i).equals(student)){
+                MAHASISWA.remove(i);
+                NomerMahasiswa--;
+                break;
+            }
+        }     }
+    public ArrayList<String> getStudents() {
+        return MAHASISWA;
+    }
+
+    public int getNumberStuden() {
+        return NomerMahasiswa;
+    }
+
+}
