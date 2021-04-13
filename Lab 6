@@ -9,22 +9,23 @@ public class Main {
                 {'A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}, {'D', 'B', 'A', 'B', 'C', 'A', 'E', 'E', 'A', 'D'},
                 {'E', 'D', 'D', 'A', 'C', 'B', 'E', 'E', 'A', 'D'}, {'C', 'B', 'A', 'E', 'D', 'C', 'E', 'E', 'A', 'D'},
                 {'A', 'B', 'D', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}, {'B', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
-                {'B', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}, {'E', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}    };
+                {'B', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}, {'E', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}
+  };
         char[] Kuncijawaban = {'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'};
         int[] result = new int[jumMahasiswa];
 
-        for(int i=0; i<jumMahasiswa; ++i) {
+        for(int x=0; i<jumMahasiswa; ++x) {
             int jawabanbenar = 0;
-            for(int j=0; j<JumJawaban; ++j) {
-                if(JumJawaban[i][j] == Kuncijawaban[j]) {
+            for(int z=0; j<JumJawaban; ++z) {
+                if(JumJawaban[x][z] == Kuncijawaban[z]) {
                     jawabanbenar++;
                 }
             }
-            result[i] = jawabanbenar;
+            result[x] = jawabanbenar;
         }
         System.out.println("jawaban benar di masing-masing mahasiswa : \n");
-        for(int i=0; i<jumMahasiswa; ++i) {
-            System.out.println("Mhs " + i + " jumlah jawaban yang benar adalah " + result[i]+" dari 10 Soal");
+        for(int x=0; i<jumMahasiswa; ++x) {
+            System.out.println("Mhs " + x + " jumlah jawaban yang benar adalah " + result[x]+" dari 10 Soal");
         }
     }
 }
