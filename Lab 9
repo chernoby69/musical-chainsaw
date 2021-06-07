@@ -1,0 +1,54 @@
+Nomer 1 
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        new a();
+        new b();
+    }
+    static class a {
+        int i = 7;
+
+        public a() {
+            setI(20);
+            System.out.println("i from A is " + i); }
+        public void setI(int i) {
+            this.i = 2 * i; }
+    }
+    static class b extends a {
+        public b() {
+            System.out.println("i from B is " + i); }
+        }
+
+}
+
+Nomer 2
+
+package com.company;
+
+public class soal_2 {
+    public static void main(String[] args) {
+        new Person().printPerson();
+        new Student().printPerson();
+    }
+}
+class Student extends Person {
+    @Override
+    public String getInfo() {
+        return "Student";
+    }
+}
+class Person {
+    public String getInfo() {
+        return "Person";
+    }
+    public void printPerson() {
+        System.out.println(getInfo());
+    }
+}
+
+
+Nomer 3 
+
